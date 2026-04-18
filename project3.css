@@ -1,0 +1,81 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f9f9f9;
+    color: #222;
+}
+
+.intro {
+    background-color: #500000; /* TAMU Maroon */
+    padding: 20px;
+    text-align: center;
+    color: white;
+}
+
+.intro img {
+    width: 120px;
+    display: block;
+    margin: 0 auto 10px auto;
+}
+
+main {
+    width: 80%;
+    margin: auto;
+    padding: 20px;
+    text-align: center;
+}
+
+h2 {
+    border-bottom: 3px solid #500000;
+    padding-bottom: 5px;
+    text-align: center;
+}
+
+h3 {
+    text-align: center;
+}
+
+h4 {
+    text-align: center;
+}
+
+.centered-line {
+    text-align: center;
+    margin: 5px 0; 
+}
+
+.uml-image-container {
+    width: 100%;
+    text-align: center;
+    margin: 20px 0;
+}
+
+.uml-image-container img {
+    max-width: 100%;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+}
+
+.description-section ul {
+    list-style-type: square;
+    margin-left: 20px;
+    text-align: center;
+}
+
+.uml-text {
+    background-color: #eee;
+    padding: 15px;
+    border-left: 4px solid #500000;
+    white-space: pre-wrap;
+    font-family: monospace;
+    text-align: center;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    color: #777;
+    margin-top: 40px;
+    
+}

@@ -1,0 +1,80 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>Tristan's Website</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link id="theme" rel="stylesheet" href="project3.css">
+</head>
+
+<section class="intro">
+    <div>
+        <img src="images/TALLC.png">
+        <h1>
+            Project 3 Pre-Deliverable
+        </h1>
+        <h3>TA LLC.</h3>
+    </div>
+</section>
+
+<section class="uml-section">
+    <h2>UML Class Diagram</h2>
+    <p style="text-align: center;">The following UML diagram represents the structural design of the load balancer system, including all primary classes and their relationships.</p>
+
+    <div class="uml-image-container">
+        <img src="images/p3uml.jpg" alt="UML Diagram">
+    </div>
+</section>
+
+
+<section class="description-section">
+    <h2>Design Description</h2>
+    
+    <h3>Overview:</h3>
+    <p style="text-align: center;">
+        This simulation models a load balancer responsible for distributing web requests to
+        dynamically allocated web servers. Requests contain a source IP, destination IP, 
+        job type, and required processing time.
+    </p>
+
+    <h3>Class Responsibilities:</h3>
+
+    <h4>SimulationController</h4>
+    <p class="centered-line">Handles input configuration</p>
+    <p class="centered-line">Initializes system components</p>
+    <p class="centered-line">Runs the main simulation loop</p>
+    <p class="centered-line">Outputs logs and results</p>
+
+    <h4>LoadBalancer</h4>
+    <p class="centered-line">Manages a pool of WebServer objects</p>
+    <p class="centered-line">Maintains the RequestQueue</p>
+    <p class="centered-line">Keeps track of simulation time</p>
+    <p class="centered-line">Adds random incoming requests</p>
+    <p class="centered-line">Distributes jobs to servers</p>
+    <p class="centered-line">Adds/removes servers to maintain balance</p>
+
+    <h4>WebServer</h4>
+    <p class="centered-line">Processes one Request at a time</p>
+    <p class="centered-line">Tracks remaining processing time</p>
+    <p class="centered-line">Marks itself busy/idle</p>
+    <p class="centered-line">Requests new tasks from the LoadBalancer</p>
+
+    <h4>RequestQueue</h4>
+    <p class="centered-line">Stores pending Request objects</p>
+    <p class="centered-line">Implements FIFO enqueue/dequeue</p>
+    <p class="centered-line">Reports size and empty state</p>
+
+    <h4>Request</h4>
+    <p class="centered-line">Holds IP source, IP destination</p>
+    <p class="centered-line">Stores time required and job type</p>
+
+    
+    <h3>Class Relationships</h3>
+    <p class="centered-line">SimulationController depends on LoadBalancer : it creates and manages the load balancer during the simulation.</p>
+    <p class="centered-line">LoadBalancer is composed of a single RequestQueue : it owns the queue and is responsible for managing requests.</p>
+    <p class="centered-line">LoadBalancer is composed of multiple WebServers : it dynamically allocates and deallocates servers to handle incoming requests.</p>
+    <p class="centered-line">LoadBalancer depends on Request : it generates requests to add to the queue, but does not own them.</p>
+    <p class="centered-line">RequestQueue aggregates multiple Requests : it stores pending requests in a first-in-first-out manner.</p>
+    <p class="centered-line">WebServer is associated with zero or one Request at a time : it processes a request while it is assigned and remains idle otherwise.</p>
+    
+
+</section>

@@ -1,0 +1,316 @@
+@font-face {
+  font-family: 'Akira';
+  src: url('fonts/AkiraExpandedDemo.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Sandra';
+  src: url('fonts/Sandra.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-image: url("images/home_bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;        
+  background-position: center;   
+  background-attachment: fixed; 
+}
+
+nav {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  font-size: larger;
+  font-family: 'Sandra', sans-serif;
+  margin: 50px;
+  gap: 30px;
+  color: #302f2b;
+}
+
+nav a {
+  text-decoration: none;  
+  color: inherit;       
+}
+
+nav a:hover {
+  opacity: 0.6;              
+}
+
+nav a:visited {
+  color: inherit;       
+}
+
+.theme-default .home {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  color: #302f2b;
+}
+
+.theme-default .home img {
+  width: 400px
+}
+
+.theme-default .home p {
+  max-width: 750px;
+}
+
+.theme-default .home ul {
+  max-width: 750px;
+  font-size: large;
+}
+
+.theme-default .home h1 {
+  font-size: xx-large;
+}
+
+.theme-alt .home {
+  display: none
+}
+
+.theme-default .list {
+  display: flex;
+  justify-content: flex-start;
+  margin-left: 0;
+  padding-left: 200px;
+  font-family: 'Akira', serif;
+  color: #302f2b;
+}
+
+.theme-default .list h1 {
+  font-size: 100px;
+  margin: 0;
+  display: inline-block;
+  transition: all 0.5s ease;
+}
+
+.theme-default .list h1:hover {
+  opacity: 0.6;              
+  transform: translateX(30px);
+}
+
+.theme-default .list a {
+  text-decoration: none;  
+  color: inherit;         
+}
+
+.theme-default .list a:visited {
+  color: inherit;         
+}
+
+.theme-default .portfolio {
+  font-family: 'Akira', serif;
+  color: #302f2b;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  margin-bottom: 30px;
+} 
+
+.theme-default .portfolio p {
+  max-width: 750px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.theme-default .portfolio a {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  color: inherit;    
+}
+
+.theme-default .portfolio a:hover {
+  opacity: 0.6;              
+}
+
+.theme-default .portfolio a:visited {
+  color: inherit;       
+}
+
+.theme-default .portfolio img{
+  max-width: 200px;
+}
+
+.theme-alt .portfolio {
+  display: none;
+}
+
+.theme-default .qualifications {
+  font-family: 'Akira', serif;
+  color: #302f2b;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.theme-default .qualifications p {
+  text-align: center;
+  max-width: 800px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.theme-default .qualifications a {
+  color: inherit;    
+}
+
+.theme-default .qualifications a:hover {
+  opacity: 0.6;              
+}
+
+.theme-default .qualifications a:visited {
+  color: inherit;       
+}
+
+.theme-default .qualifications_mid {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  font-family: 'Akira', serif;
+  color: #302f2b;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.theme-default .qualifications_list {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  color: #302f2b;
+  display: grid;
+  grid-template-columns: 200px auto 400px;
+  column-gap: 40px; 
+  justify-content: center;
+  gap: 40px;
+  align-items: flex-start;
+}
+
+.theme-default .qualifications_list img {
+  max-width: 150px;
+  margin-right: 20px;
+}
+
+.theme-default .qualifications_list h1,
+.theme-default .qualifications_list h3 {
+  margin: 0 0 5px 0
+}
+
+.theme-default .qualifications_list li {
+  max-width: 750px;
+}
+
+.theme-default .qualifications_list a:hover {
+  opacity: 0.6;              
+}
+
+.theme-default .qualifications_bottom {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  color: #302f2b;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 30px;
+}
+
+.theme-default .embed {
+  display: block;       
+  margin: 0 auto;      
+  width: 80%;
+  height: 600px;
+}
+
+.service {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  color: #302f2b;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  text-align: center;
+  gap: 40px;
+}
+
+.service img {
+  max-width: 300px;
+  margin-right: 20px;
+}
+
+.service p {
+  max-width: 300px;
+}
+
+.service a {
+  color: inherit;    
+}
+
+.service a:hover {
+  opacity: 0.6;              
+}
+
+.service a:visited {
+  color: inherit;       
+}
+
+.service_statement {
+  font-family: 'Akira', serif;
+  color: #302f2b;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.service_statement p {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  max-width: 1000px;
+  margin-top: 0px;
+}
+
+.theme-default .hero {
+  display: none
+}
+
+button {
+  font-family: 'Akira', serif;
+  background-color: #000;
+  color: #fff;
+  border: none;
+  border-radius: 12px;
+  padding: 12px 24px;
+  font-size: 16px;
+  cursor: pointer;
+  text-align: center;
+  margin-left: 1%;
+}
+
+button:hover {
+  opacity: 0.6;     
+}
+
+.portfolio-1 {
+  display: none;
+}
+
+.qualifications-1 {
+  display: none;
+}
+
+.resume_logos {
+  display: none;
+}
+
+.embed-1 {
+  display: none;
+}
+
+.service-1 {
+ display: none; 
+}
+
+.service_statement-1 {
+  display: none;
+}
